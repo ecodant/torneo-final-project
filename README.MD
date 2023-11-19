@@ -2,9 +2,9 @@
 
 ### Estudiantes:
 
-- **Edwin Viña Ramos
-- **Juan Pablo Rodriguez
-- **Daniel Garcia
+- Edwin Viña Ramos
+- Juan Pablo Rodriguez
+- Daniel Garcia
 
 ## Problema
 
