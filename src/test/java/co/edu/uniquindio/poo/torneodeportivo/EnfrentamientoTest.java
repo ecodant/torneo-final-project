@@ -26,7 +26,7 @@ public class EnfrentamientoTest {
     public void testEnJuego() {
         LOG.info("Inicio de prueba testEnJuego...");
         LocalDate fechaEnfrentamiento = LocalDate.of(2023, 11, 20);
-        LocalTime horaEnfrentamiento = LocalTime.of(4, 30, 30);
+        LocalTime horaEnfrentamiento = LocalTime.of(3, 10, 30);
 
         Enfrentamiento enfrentamiento = new Enfrentamiento("E1", "La Cancha Norte", fechaEnfrentamiento, horaEnfrentamiento);
 
