@@ -107,7 +107,7 @@ public class Equipo implements Participante {
         ASSERTION.assertion( !existeJugador,"El jugador ya esta registrado");
     }
 
-    /* REQUISITO #1 - Validación del Genero de un jugador para el equipo */
+    /* REQUISITO #1 */
 
     private void validarGenero(Jugador jugador){
         if (this.genero == GeneroTorneo.MASCULINO || this.genero == GeneroTorneo.FEMENINO){

@@ -205,8 +205,8 @@ public class Torneo {
         boolean existente = buscarEnfrentamiento(enfrentamiento).isPresent();
         boolean duelosCruzados = buscarFechasCruzadas(enfrentamiento).isPresent();
         
-        ASSERTION.assertion( !existente, "El enfrentamiento ya esta agendado");
-        ASSERTION.assertion( !duelosCruzados, "Los equipos agendados para enfrentamiento tiene un juego ese día");
+        ASSERTION.assertion( !existente, "Ya existe un enfrentamiento agendado.");
+        ASSERTION.assertion( !duelosCruzados, "Los equipos agendados para enfrentamiento tiene un juego ese día.");
     }
 
     /**
@@ -254,8 +254,9 @@ public class Torneo {
         Predicate<Enfrentamiento> condicion = j-> j.getParticipante1().getNombreCompleto().equals(nombreParticipante)
         || j.getParticipante2().getNombreCompleto().equals(nombreParticipante);
 
-        return enfrentamientos.stream().filter(condicion).collect(Collectors.toSet());
+        return enfrentamientos.stream().filter(condicion).toList();
     }
+
     /* REQUISITO #5 */
     public Collection<Enfrentamiento> buscarEnfrentamientosPorJuez(int licenciaJuez) {
         Predicate<Enfrentamiento> condicion = enfrentamiento ->
