@@ -9,14 +9,6 @@ import java.util.Optional;
 import java.util.Random;
 import java.util.function.Predicate;
 
-/* 
-    Se desea poder agendar los enfrentamientos, indicando el lugar donde
-    se realizará el enfrentamiento (nombre, ubicación), la fecha y hora
-    del enfrentamiento, los equipos que se enfrentarán, el juez o jueces
-    que arbitraran el encuentro, el resultado del enfrentamiento cuando
-    haya concluido (puntos realizados por cada equipo) y el estado 
-    del enfrentamiento. Los posibles estados de un enfrentamiento son:
- */
 public class Enfrentamiento {
     private String nombre;
     private String ubicacion;
@@ -137,7 +129,7 @@ public class Enfrentamiento {
         this.puntosParticipante1 = (short) 2;
         this.puntosParticipante2 = (short) 1;
 
-        /*Aleatoriedad para en los puntos "simular" un juego de verdad.*/
+        /* Aleatoriedad para en los puntos "simular" un juego de verdad. */
         // this.puntosParticipante1 = (short) (random.nextInt(3) + 1);
         // this.puntosParticipante2 = (short) (random.nextInt(3) + 1);
 

@@ -137,9 +137,7 @@ public class Torneo {
     /* REQUISITO #2 */
     public LinkedList<Juez> registroJueces(){
         for (Enfrentamiento elemento : enfrentamientos) {
-            for (Juez juez : elemento.getJueces()) {
-                if(!(buscarJuez(juez).isPresent() == true)) jueces.add(juez);
-            }
+            for (Juez juez : elemento.getJueces())  if(!(buscarJuez(juez).isPresent() == true)) jueces.add(juez);
         }
         return (LinkedList<Juez>) jueces;
     }
@@ -163,14 +161,13 @@ public class Torneo {
         equipos = new ArrayList<>(new HashSet<>(equipos));
     
         Comparator<Equipo> condicion = Comparator
-        .comparing((Equipo equipo) -> equipo.getValorVictoria().valor()).reversed()
+        .comparing((Equipo equipo) -> equipo.getValorDerrota().valor()).reversed()
         .thenComparing(equipo -> equipo.getValorEmpate().valor()).reversed()
-        .thenComparing(equipo -> equipo.getValorDerrota().valor());
+        .thenComparing(equipo -> equipo.getValorVictoria().valor());
     
         List<Equipo> equiposOrdenados = equipos.stream()
                 .sorted(condicion)
                 .collect(Collectors.toList());
-        Collections.reverse(equiposOrdenados);
 
         return equiposOrdenados;
     }

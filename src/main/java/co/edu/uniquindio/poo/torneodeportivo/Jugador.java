@@ -20,7 +20,7 @@ public class Jugador extends Persona implements Participante {
         super(nombre, apellido, email, celular);
         ASSERTION.assertion( fechaNacimiento != null , "La fecha de nacimiento es requerida");
         ASSERTION.assertion( genero != null, "El género es requerido");
-        /*Limitación dado que no debería existir un Jugador de género "MIXTO", solo aplicará para Torneo y Equipo.*/
+        /* Limitación dado que no debería existir un Jugador de género "MIXTO", solo aplicará para Torneo y Equipo.*/
         ASSERTION.assertion(genero != GeneroTorneo.MIXTO, "El género de un Jugador no puede ser 'Mixto'");
 
         this.genero = genero;

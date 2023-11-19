@@ -25,9 +25,9 @@ public class Equipo implements Participante {
     private Estadistica victorias =  new Estadistica("victorias", TipoEstadistica.POSITIVA);
     private Estadistica derrotas = new Estadistica("derrotas", TipoEstadistica.NEGATIVA);
     private Estadistica empates  = new Estadistica("empates", TipoEstadistica.NEUTRAL);
-    private  ValorEstadistica valorVictorias;  
-    private  ValorEstadistica valorDerrotas;  
-    private  ValorEstadistica valorEmpates;  
+    private ValorEstadistica valorVictorias;  
+    private ValorEstadistica valorDerrotas;  
+    private ValorEstadistica valorEmpates;  
 
     public Equipo (String nombre, Persona representante, Collection<Jugador> jugadores,
                 RegistroEstadistica registroEstadistica, GeneroTorneo genero){
@@ -73,10 +73,10 @@ public class Equipo implements Participante {
     }
 
     public void añadirEmpate(){
-
         valorEmpates = new ValorEstadistica(valorEmpates.valor() + 1, empates);
         registrarEstadistica(valorEmpates);
     }
+    
     public ValorEstadistica getValorVictoria(){
         return valorVictorias;
     }
